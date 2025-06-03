@@ -1,0 +1,70 @@
+{
+  "create": "Create",
+  "update": "Update", 
+  "delete": "Delete",
+
+  "new_task": "New Task",
+  "task_name": "Task Name",
+  "task_name_placeholder": "Enter task name",
+  "task_config_title": "Task Configuration",
+
+  "record_table": "Record Table",
+  "operation_result_field": "Operation Result Field",
+  "operator_field": "Operator Field",
+  "operation_type_field": "Operation Type Field",
+  "operation_time_field": "Operation Time Field",
+  "record_table_placeholder": "Select table for scan data storage",
+  "operation_result_placeholder": "Select field for scan data storage",
+  "operator_field_placeholder": "Select operator field",
+  "operation_type_placeholder": "Select operation type field",
+  "operation_time_placeholder": "Select operation time field",
+  
+  "input_personal_token": "Enter Authorization Code",
+  "input_personal_token_placeholder": "Enter authorization code",
+  "personal_token": "Authorization Code",
+  "how_to_get_personal_token": "How to Get Authorization Code",
+
+  "qrcode_title": "QR Code",
+  "generate_qrcode": "Generate QR Code",
+
+  "miniprogram_title": "Mini Program QR Code",
+  "get_miniprogram": "Get Mini Program",
+
+  "msg": {
+    "unknown_error": "Unknown error occurred",
+    "create_task_failed": "Failed to create task",
+    "list_task_failed": "Failed to retrieve task list",
+    "update_task_failed": "Failed to update task",
+    "delete_task_failed": "Failed to delete task",
+
+    "get_base_failed": "Failed to get base information",
+    "get_table_failed": "Failed to get table list",
+    "get_table_name_failed": "Failed to get table name",
+    "get_fields_failed": "Failed to get field list",
+    "field_type_not_select": "Field is not single/multi-select type",
+    "get_field_options_failed": "Failed to get field options",
+
+    "init_failed": "Initialization failed",
+    "create_success": "Task created successfully",
+    "update_success": "Task updated successfully",
+    "delete_success": "Task deleted successfully",
+    "delete_failed": "Failed to delete task",
+
+    "generate_qrcode_failed": "Failed to generate QR code",
+
+    "no_text_barcode_fields": "No available text/barcode fields for storing scan data",
+    "no_select_fields": "No available single/multi-select fields for operation type",
+    "no_datetime_fields": "No available date/time fields",
+    "no_user_fields": "No available user fields",
+
+    "personal_token_usage_hint": "Authorization code is only used for data submission from scanning devices",
+    "personal_token_usage_1": "1. Open Lark Base",
+    "personal_token_usage_2": "2. Click the [Base Plugin] icon",
+    "personal_token_usage_3": "3. Select [Custom Plugin]",
+    "personal_token_usage_4": "4. Click [Get Authorization Code] in the panel",
+    "personal_token_usage_5": "5. Enable authorization code and click copy button",
+
+    "qrcode_usage": "Please use the 'One-Code' terminal or mini-program to scan the QR code for task configuration",
+    "qrcode_usage_hint": "Warning: This QR code contains sensitive information. Do not screenshot or share it"
+  }
+}

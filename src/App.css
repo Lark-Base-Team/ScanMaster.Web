@@ -1,0 +1,160 @@
+@import 'reset-css';
+
+:root {
+  /* 浅色主题变量 */
+  --semi-color-primary: rgb(20, 86, 240);
+  --semi-color-primary-hover: rgb(64, 115, 244);
+  --semi-color-primary-active: rgb(12, 66, 179);
+  --semi-color-bg-0: #fff;
+  --semi-color-bg-1: #f9f9f9;
+  --semi-color-bg-2: #f3f3f3;
+  --semi-color-text-0: #1c1f23;
+  --semi-color-text-1: rgba(28, 31, 35, 0.8);
+  --semi-color-text-2: rgba(28, 31, 35, 0.6);
+  --semi-color-border: #dee0e3;
+  --semi-color-border-hover: #c9cdd4;
+  --semi-color-shadow: rgba(28, 31, 35, 0.1);
+}
+
+[theme-mode="dark"] {
+  /* 深色主题变量 */
+  --semi-color-primary: #4571e1;
+  --semi-color-primary-hover: #5c84e8;
+  --semi-color-primary-active: #3a62c7;
+  --semi-color-bg-0: #252525;
+  --semi-color-bg-1: #2b2b2b;
+  --semi-color-bg-2: #333333;
+  --semi-color-text-0: #fff;
+  --semi-color-text-1: rgba(255, 255, 255, 0.8);
+  --semi-color-text-2: rgba(255, 255, 255, 0.6);
+  --semi-color-border: #434343;
+  --semi-color-border-hover: #5a5a5a;
+  --semi-color-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.main {
+  padding: 1.5rem 1rem 1rem;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+.main h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+.main code {
+  color: #d63384;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.semi-modal-content,
+.semi-modal-header,
+.semi-tabs-bar,
+.semi-form-field-label,
+.semi-select-selection,
+.semi-input-wrapper {
+  background-color: var(--semi-color-bg-0);
+  color: var(--semi-color-text-0);
+  border-color: var(--semi-color-border);
+}
+
+.semi-button-primary {
+  background-color: var(--semi-color-primary);
+  color: white;
+}
+.semi-button-primary:hover {
+  background-color: var(--semi-color-primary-hover);
+}
+.semi-button-primary:active {
+  background-color: var(--semi-color-primary-active);
+}
+
+.theme-dark {
+  --semi-color-primary: #4571e1;
+  --semi-color-bg-0: #252525;
+  --semi-color-bg-1: #2b2b2b;
+  --semi-color-text-0: #fff;
+  --semi-color-text-1: rgba(255,255,255,0.8);
+  --semi-color-border: #434343;
+}
+
+.theme-light {
+  --semi-color-primary: rgb(20, 86, 240);
+  --semi-color-bg-0: #fff;
+  --semi-color-bg-1: #f9f9f9;
+  --semi-color-text-0: #1c1f23;
+  --semi-color-text-1: rgba(28,31,35,0.8);
+  --semi-color-border: #dee0e3;
+}
+
+.theme-dark .semi-modal-content,
+.theme-dark .semi-modal-header,
+.theme-dark .semi-modal-footer {
+  background-color: var(--semi-color-bg-0);
+  color: var(--semi-color-text-0);
+}
+
+.theme-dark .semi-modal-close-btn {
+  color: var(--semi-color-text-0);
+}
+
+.theme-dark .semi-modal-mask {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* .theme-dark .semi-tabs-tab {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+} */
+
+.theme-dark .semi-tabs-tab {
+  color: white !important; /* 使用纯白色并强制应用 */
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5); /* 添加轻微阴影增强可读性 */
+}
+
+.theme-dark .semi-tabs-tab:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.theme-dark .semi-tabs-tab-active {
+  color: var(--semi-color-primary);
+}
+
+.theme-dark .semi-input {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--semi-color-text-0);
+  border-color: var(--semi-color-border);
+}
+
+.theme-dark .semi-input:hover,
+.theme-dark .semi-input:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--semi-color-primary);
+}
+
+.theme-dark .semi-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.theme-dark .semi-form-field-label {
+  color: var(--semi-color-text-0);
+}
+
+.theme-dark .semi-select-selection {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--semi-color-text-0);
+  border-color: var(--semi-color-border);
+}
+
+.theme-dark .semi-select-selection:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--semi-color-primary);
+}
+
+.theme-dark .semi-modal {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--semi-color-text-0);
+}
+
+.theme-dark .semi-modal-body {
+  background-color: var(--semi-color-bg-0);
+  color: var(--semi-color-text-0);
+}

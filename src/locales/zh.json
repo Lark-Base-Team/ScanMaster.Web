@@ -1,0 +1,70 @@
+{
+  "create": "创建",
+  "update": "修改",
+  "delete": "删除",
+
+  "new_task": "新建任务",
+  "task_name": "任务名称",
+  "task_name_placeholder": "请输入任务名称",
+  "task_config_title": "任务的配置",
+
+  "record_table": "操作记录表",
+  "operation_result_field": "操作结果字段",
+  "operator_field": "操作人字段",
+  "operation_type_field": "操作类型字段",
+  "operation_time_field": "操作时间字段",
+  "record_table_placeholder": "请选择扫码数据存储的表",
+  "operation_result_placeholder" : "请选择扫码数据存储的字段",
+  "operator_field_placeholder": "请选择操作人字段",
+  "operation_type_placeholder": "请选择操作类型字段",
+  "operation_time_placeholder": "请选择操作时间字段",
+  
+  "input_personal_token": "输入授权码",
+  "input_personal_token_placeholder": "请输入授权码",
+  "personal_token": "授权码",
+  "how_to_get_personal_token": "如何获取授权码",
+
+  "qrcode_title": "二维码",
+  "generate_qrcode": "生成二维码",
+
+  "miniprogram_title": "小程序码",
+  "get_miniprogram": "获取小程序",
+
+  "msg": {
+    "unknown_error": "未知错误",
+    "create_task_failed": "创建任务失败",
+    "list_task_failed": "获取任务列表失败",
+    "update_task_failed": "更新任务失败",
+    "delete_task_failed": "删除任务失败",
+
+    "get_base_failed": "获取当前表格信息失败",
+    "get_table_failed": "获取数据表列表失败",
+    "get_table_name_failed": "获取数据表名称失败",
+    "get_fields_failed": "获取字段列表失败",
+    "field_type_not_select": "字段类型不是单选或多选",
+    "get_field_options_failed": "获取字段选项失败",
+
+    "init_failed": "初始化失败",
+    "create_success": "创建成功",
+    "update_success": "更新成功",
+    "delete_success": "删除成功",
+    "delete_failed": "删除失败",
+
+    "generate_qrcode_failed": "生成二维码失败",
+
+    "no_text_barcode_fields": "没有可用的文本或条形码字段来存储扫码数据",
+    "no_select_fields": "没有可用的单选或多选字段来用作操作类型",
+    "no_datetime_fields": "没有可用的日期字段",
+    "no_user_fields": "没有可用的人员字段",
+
+    "personal_token_usage_hint": "授权码仅用于扫码设备扫码后提交数据，不会用作其他用途",
+    "personal_token_usage_1": "1. 打开飞书多维表格",
+    "personal_token_usage_2": "2. 点击右上角的【多维表格插件】图标",
+    "personal_token_usage_3": "3. 点击【自定义插件】",
+    "personal_token_usage_4": "4. 在自定义插件面板点击【获取授权码】",
+    "personal_token_usage_5": "5. 选中启用授权码，点击复制按钮",
+
+    "qrcode_usage": "请使用「一码通」终端或小程序扫描二维码完成任务配置",
+    "qrcode_usage_hint": "注意：此二维码包含表格授权码，请勿截图或分享给他人，以防信息泄露"
+  }
+}

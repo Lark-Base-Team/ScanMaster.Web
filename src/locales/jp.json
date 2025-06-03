@@ -1,0 +1,70 @@
+{
+    "create": "作成",
+    "update": "更新",
+    "delete": "削除",
+  
+    "new_task": "新規タスク",
+    "task_name": "タスク名",
+    "task_name_placeholder": "タスク名を入力してください",
+    "task_config_title": "タスク設定",
+  
+    "record_table": "記録テーブル",
+    "operation_result_field": "操作結果フィールド",
+    "operator_field": "操作者フィールド",
+    "operation_type_field": "操作タイプフィールド",
+    "operation_time_field": "操作時間フィールド",
+    "record_table_placeholder": "スキャンデータを保存するテーブルを選択",
+    "operation_result_placeholder": "スキャンデータを保存するフィールドを選択",
+    "operator_field_placeholder": "操作者フィールドを選択",
+    "operation_type_placeholder": "操作タイプフィールドを選択",
+    "operation_time_placeholder": "操作時間フィールドを選択",
+    
+    "input_personal_token": "認証コード入力",
+    "input_personal_token_placeholder": "認証コードを入力してください",
+    "personal_token": "認証コード",
+    "how_to_get_personal_token": "認証コードの取得方法",
+  
+    "qrcode_title": "QRコード",
+    "generate_qrcode": "QRコード生成",
+
+    "miniprogram_title": "ミニプログラムQRコード",
+    "get_miniprogram": "ミニプログラムを取得",
+  
+    "msg": {
+      "unknown_error": "不明なエラーが発生しました",
+      "create_task_failed": "タスクの作成に失敗しました",
+      "list_task_failed": "タスクリストの取得に失敗しました",
+      "update_task_failed": "タスクの更新に失敗しました",
+      "delete_task_failed": "タスクの削除に失敗しました",
+  
+      "get_base_failed": "テーブル情報の取得に失敗しました",
+      "get_table_failed": "テーブルリストの取得に失敗しました",
+      "get_table_name_failed": "テーブル名の取得に失敗しました",
+      "get_fields_failed": "フィールドリストの取得に失敗しました",
+      "field_type_not_select": "フィールドタイプが選択型ではありません",
+      "get_field_options_failed": "フィールドオプションの取得に失敗しました",
+  
+      "init_failed": "初期化に失敗しました",
+      "create_success": "タスクを作成しました",
+      "update_success": "タスクを更新しました",
+      "delete_success": "タスクを削除しました",
+      "delete_failed": "削除に失敗しました",
+  
+      "generate_qrcode_failed": "QRコードの生成に失敗しました",
+  
+      "no_text_barcode_fields": "スキャンデータを保存するための利用可能なテキスト/バーコードフィールドがありません",
+      "no_select_fields": "操作タイプとして使用できる選択型フィールドがありません",
+      "no_datetime_fields": "利用可能な日付/時刻フィールドがありません",
+      "no_user_fields": "利用可能なユーザーフィールドがありません",
+  
+      "personal_token_usage_hint": "認証コードはスキャン端末からのデータ送信のみに使用されます",
+      "personal_token_usage_1": "1. Lark Baseを開く",
+      "personal_token_usage_2": "2. 右上の【Baseプラグイン】アイコンをクリック",
+      "personal_token_usage_3": "3. 【カスタムプラグイン】を選択",
+      "personal_token_usage_4": "4. パネルで【認証コード取得】をクリック",
+      "personal_token_usage_5": "5. 認証コードを有効にしてコピーボタンをクリック",
+  
+      "qrcode_usage": "「ワンコード」端末またはミニプログラムを使用してQRコードをスキャンし、タスク設定を完了してください",
+      "qrcode_usage_hint": "注意: このQRコードには機密情報が含まれています。スクリーンショットを撮ったり他人と共有しないでください"
+    }
+}
