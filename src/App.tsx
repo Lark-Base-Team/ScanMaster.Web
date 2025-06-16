@@ -24,7 +24,11 @@ export default function App() {
         const taskList = await listTasks(t, baseId);
         setTasks(taskList);
       } catch (err) {
-        Toast.error(t('msg.init_failed') + ': ' + (err instanceof Error ? err.message : String(err)));
+        Toast.error({
+          content: t('msg.init_failed') + ': ' + (err instanceof Error ? err.message : String(err)),
+          duration: 3,
+          top: '50%',
+        });
       }
     };
     init();
@@ -73,14 +77,26 @@ export default function App() {
         });
         setTasks([...tasks, newTask]);
         setActiveTab(String(newTask.id));
-        Toast.success(t('msg.create_success'));
+        Toast.success({
+          content: t('msg.create_success'),
+          duration: 3,
+          top: '50%',
+        });
       } else {
         const updatedTask = await updateTask(t, Number(activeTab), { config: taskConfig });
         setTasks(tasks.map(t => t.id === updatedTask.id ? updatedTask : t));
-        Toast.success(t('msg.update_success'));
+        Toast.success({
+          content: t('msg.update_success_regenerate'),
+          duration: 3,
+          top: '50%',
+        });
       }
     } catch (err: unknown) {
-      Toast.error(err instanceof Error ? err.message : t('msg.unknown_error'));
+      Toast.error({
+        content: err instanceof Error ? err.message : t('msg.unknown_error'),
+        duration: 3,
+        top: '50%',
+      });
     }
   };
 
@@ -91,9 +107,17 @@ export default function App() {
       const newTasks = tasks.filter(t => t.id !== taskId);
       setTasks(newTasks);
       setActiveTab(newTasks.length > 0 ? String(newTasks[0].id) : 'new');
-      Toast.success(t('msg.delete_success'));
+      Toast.success({
+        content: t('msg.delete_success'),
+        duration: 3,
+        top: '50%',
+      });
     } catch (err: unknown) {
-      Toast.error(err instanceof Error ? err.message : t('msg.delete_failed'));
+      Toast.error({
+        content: err instanceof Error ? err.message : t('msg.delete_failed'),
+        duration: 3,
+        top: '50%',
+      });
     }
   };
 
@@ -101,26 +125,49 @@ export default function App() {
     <ConfigProvider>
       <main className={`main theme-${theme}`} style={{
         backgroundColor: 'var(--semi-color-bg-0)',
-        color: 'var(--semi-color-text-0)'
+        color: 'var(--semi-color-text-0)',
+        display: 'flex',
+        flexDirection: 'column',
+        // minHeight: '100vh',
+        padding: '4px' // 减少整体内边距
       }}>
-        <Tabs activeKey={activeTab} onChange={setActiveTab}>
-          {tasks.map(task => (
-            <TabPane tab={task.config.name} itemKey={String(task.id)} key={task.id}>
+        <div style={{ flex: 1 }}>
+          <Tabs activeKey={activeTab} onChange={setActiveTab}>
+            {tasks.map(task => (
+              <TabPane tab={task.config.name} itemKey={String(task.id)} key={task.id}>
+                <TaskForm
+                  task={task}
+                  onSave={handleSaveTask}
+                  onDelete={() => handleDeleteTask(task.id)}
+                  theme={theme}
+                />
+              </TabPane>
+            ))}
+            <TabPane tab={t('new_task')} itemKey="new">
               <TaskForm
-                task={task}
                 onSave={handleSaveTask}
-                onDelete={() => handleDeleteTask(task.id)}
                 theme={theme}
               />
             </TabPane>
-          ))}
-          <TabPane tab={t('new_task')} itemKey="new">
-            <TaskForm
-              onSave={handleSaveTask}
-              theme={theme}
-            />
-          </TabPane>
-        </Tabs>
+          </Tabs>
+        </div>
+
+        <footer style={{
+          textAlign: 'center',
+          padding: '12px', // 减少页脚内边距
+          borderTop: '1px solid var(--semi-color-border)',
+          marginTop: '20px', // 减少与上方内容的间距
+          fontSize: '14px'
+        }}>
+          <a
+            href="https://xcn7prm1a1hr.feishu.cn/wiki/L0z2wyN1dioZmvkdpgVcQOOjnU8"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'var(--semi-color-link)' }}
+          >
+            {t('help_document')}
+          </a>
+        </footer>
       </main>
     </ConfigProvider>
   );
@@ -296,7 +343,11 @@ function TaskForm({ task, onSave, onDelete, theme }: {
       setQrCodeUrl(qrCodeDataUrl);
       setQrCodeVisible(true);
     } catch (err) {
-      Toast.error(t('msg.generate_qrcode_failed') + (err instanceof Error ? err.message : String(err)));
+      Toast.error({
+        content: t('msg.generate_qrcode_failed') + (err instanceof Error ? err.message : String(err)),
+        duration: 3,
+        top: '50%',
+      });
     } finally {
       setQrCodeLoading(false);
     }
@@ -383,28 +434,6 @@ function TaskForm({ task, onSave, onDelete, theme }: {
         </Form.Select>
 
         <Form.Select
-          field="operatorField"
-          label={t('operator_field')}
-          // rules={[{ required: true }]}
-          style={{ width: '100%' }}
-          placeholder={t('operator_field_placeholder')}
-        >
-          {fields
-            .filter(field => field.type === FieldType.User)
-            .map(field => (
-              <Form.Select.Option key={`${field.id}-${field.name}`} value={field.name}>
-                {field.name}
-              </Form.Select.Option>
-            ))
-          }
-          {fields.filter(field => field.type === FieldType.User).length === 0 && (
-            <Form.Select.Option disabled value="">
-              {t('msg.no_user_fields')}
-            </Form.Select.Option>
-          )}
-        </Form.Select>
-
-        <Form.Select
           field="operationField"
           label={t('operation_type_field')}
           rules={[{ required: true }]}
@@ -459,9 +488,31 @@ function TaskForm({ task, onSave, onDelete, theme }: {
           )}
         </Form.Select>
 
+        <Form.Select
+          field="operatorField"
+          label={t('operator_field')}
+          // rules={[{ required: true }]}
+          style={{ width: '100%' }}
+          placeholder={t('operator_field_placeholder')}
+        >
+          {fields
+            .filter(field => field.type === FieldType.User)
+            .map(field => (
+              <Form.Select.Option key={`${field.id}-${field.name}`} value={field.name}>
+                {field.name}
+              </Form.Select.Option>
+            ))
+          }
+          {fields.filter(field => field.type === FieldType.User).length === 0 && (
+            <Form.Select.Option disabled value="">
+              {t('msg.no_user_fields')}
+            </Form.Select.Option>
+          )}
+        </Form.Select>
+
         <div style={{ marginTop: 20, display: 'flex', justifyContent: 'space-between' }}>
           <div>
-            <Button htmlType="submit" theme="solid" type="primary" style={{ marginRight: 8 }}>
+            <Button htmlType="submit" style={{ marginRight: 8 }}>
               {task ? t('update') : t('create')}
             </Button>
 
@@ -619,7 +670,7 @@ function TaskForm({ task, onSave, onDelete, theme }: {
           <img
             src="./images/miniprogram.jpg"
             alt={t('miniprogram_title')}
-            style={{ width: 200 }}
+            style={{ width: 240 }}
           />
         </div>
       </Modal>

@@ -5,18 +5,18 @@
 
   "new_task": "新建任务",
   "task_name": "任务名称",
-  "task_name_placeholder": "请输入任务名称",
+  "task_name_placeholder": "请输入数据采集任务的名称",
   "task_config_title": "任务的配置",
 
-  "record_table": "操作记录表",
-  "operation_result_field": "操作结果字段",
+  "record_table": "扫码数据要同步的表",
+  "operation_result_field": "扫码结果写入的字段",
   "operator_field": "操作人字段",
-  "operation_type_field": "操作类型字段",
+  "operation_type_field": "扫码时可选择的操作类型字段",
   "operation_time_field": "操作时间字段",
-  "record_table_placeholder": "请选择扫码数据存储的表",
-  "operation_result_placeholder" : "请选择扫码数据存储的字段",
+  "record_table_placeholder": "请选择扫码数据要同步的表",
+  "operation_result_placeholder" : "请选择扫码结果写入的字段",
   "operator_field_placeholder": "请选择操作人字段",
-  "operation_type_placeholder": "请选择操作类型字段",
+  "operation_type_placeholder": "请选择扫码时可选择的操作类型字段",
   "operation_time_placeholder": "请选择操作时间字段",
   
   "input_personal_token": "输入授权码",
@@ -25,10 +25,11 @@
   "how_to_get_personal_token": "如何获取授权码",
 
   "qrcode_title": "二维码",
-  "generate_qrcode": "生成二维码",
+  "generate_qrcode": "生成任务配置",
+  "help_document": "帮助文档",
 
-  "miniprogram_title": "小程序码",
-  "get_miniprogram": "获取小程序",
+  "miniprogram_title": "一码通微信小程序",
+  "get_miniprogram": "获取微信小程序",
 
   "msg": {
     "unknown_error": "未知错误",
@@ -45,8 +46,9 @@
     "get_field_options_failed": "获取字段选项失败",
 
     "init_failed": "初始化失败",
-    "create_success": "创建成功",
+    "create_success": "创建成功，请生成任务配置",
     "update_success": "更新成功",
+    "update_success_regenerate": "更新成功，请重新生成任务配置",
     "delete_success": "删除成功",
     "delete_failed": "删除失败",
 
@@ -64,7 +66,7 @@
     "personal_token_usage_4": "4. 在自定义插件面板点击【获取授权码】",
     "personal_token_usage_5": "5. 选中启用授权码，点击复制按钮",
 
-    "qrcode_usage": "请使用「一码通」终端或小程序扫描二维码完成任务配置",
+    "qrcode_usage": "请使用「一码通」终端或微信小程序扫码加载任务配置",
     "qrcode_usage_hint": "注意：此二维码包含表格授权码，请勿截图或分享给他人，以防信息泄露"
   }
 }

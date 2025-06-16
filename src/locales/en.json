@@ -25,7 +25,8 @@
   "how_to_get_personal_token": "How to Get Authorization Code",
 
   "qrcode_title": "QR Code",
-  "generate_qrcode": "Generate QR Code",
+  "generate_qrcode": "Generate Task Configuration",
+  "help_document": "Help Document",
 
   "miniprogram_title": "Mini Program QR Code",
   "get_miniprogram": "Get Mini Program",
@@ -45,8 +46,9 @@
     "get_field_options_failed": "Failed to get field options",
 
     "init_failed": "Initialization failed",
-    "create_success": "Task created successfully",
+    "create_success": "Task created successfully, please generate task configuration",
     "update_success": "Task updated successfully",
+    "update_success_regenerate": "Task updated successfully, please regenerate task configuration",
     "delete_success": "Task deleted successfully",
     "delete_failed": "Failed to delete task",
 
@@ -65,6 +67,6 @@
     "personal_token_usage_5": "5. Enable authorization code and click copy button",
 
     "qrcode_usage": "Please use the 'One-Code' terminal or mini-program to scan the QR code for task configuration",
-    "qrcode_usage_hint": "Warning: This QR code contains sensitive information. Do not screenshot or share it"
+    "qrcode_usage_hint": "Warning: This QR code contains table authorization code. Do not screenshot or share it with others to prevent information leakage"
   }
 }
