@@ -57,7 +57,7 @@
     "no_text_barcode_fields": "スキャンデータを保存するための利用可能なテキスト/バーコードフィールドがありません",
     "no_select_fields": "操作タイプとして使用できる選択型フィールドがありません",
     "no_datetime_fields": "利用可能な日付/時刻フィールドがありません",
-    "no_user_fields": "利用可能なユーザーフィールドがありません",
+    "no_user_fields": "利用可能なユーザーまたはテキストフィールドがありません",
 
     "personal_token_usage_hint": "認証コードはスキャン端末からのデータ送信のみに使用されます",
     "personal_token_usage_1": "1. Lark Baseを開く",

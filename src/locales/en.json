@@ -57,7 +57,7 @@
     "no_text_barcode_fields": "No available text/barcode fields for storing scan data",
     "no_select_fields": "No available single/multi-select fields for operation type",
     "no_datetime_fields": "No available date/time fields",
-    "no_user_fields": "No available user fields",
+    "no_user_fields": "No available user or text fields",
 
     "personal_token_usage_hint": "Authorization code is only used for data submission from scanning devices",
     "personal_token_usage_1": "1. Open Lark Base",

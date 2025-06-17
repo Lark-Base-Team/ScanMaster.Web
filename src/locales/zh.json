@@ -57,7 +57,7 @@
     "no_text_barcode_fields": "没有可用的文本或条形码字段来存储扫码数据",
     "no_select_fields": "没有可用的单选或多选字段来用作操作类型",
     "no_datetime_fields": "没有可用的日期字段",
-    "no_user_fields": "没有可用的人员字段",
+    "no_user_fields": "没有可用的人员或文本字段",
 
     "personal_token_usage_hint": "授权码仅用于扫码设备扫码后提交数据，不会用作其他用途",
     "personal_token_usage_1": "1. 打开飞书多维表格",

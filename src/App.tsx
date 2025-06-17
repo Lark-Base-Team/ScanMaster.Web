@@ -496,14 +496,14 @@ function TaskForm({ task, onSave, onDelete, theme }: {
           placeholder={t('operator_field_placeholder')}
         >
           {fields
-            .filter(field => field.type === FieldType.User)
+            .filter(field => field.type === FieldType.User || field.type === FieldType.Text)
             .map(field => (
               <Form.Select.Option key={`${field.id}-${field.name}`} value={field.name}>
                 {field.name}
               </Form.Select.Option>
             ))
           }
-          {fields.filter(field => field.type === FieldType.User).length === 0 && (
+          {fields.filter(field => field.type === FieldType.User || field.type === FieldType.Text).length === 0 && (
             <Form.Select.Option disabled value="">
               {t('msg.no_user_fields')}
             </Form.Select.Option>
